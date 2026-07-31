@@ -17,8 +17,8 @@ end, {})
 
 -- Plugins {{{
 vim.pack.add({
-  'https://github.com/nvim-mini/mini.nvim',
   'https://github.com/neovim/nvim-lspconfig',
+  'https://github.com/nvim-mini/mini.nvim',
   'https://github.com/nvim-treesitter/nvim-treesitter',
   'https://github.com/nvim-tree/nvim-web-devicons', -- telescope dependency
   'https://github.com/nvim-lua/plenary.nvim',       -- telescope dependency
@@ -56,7 +56,7 @@ require('ibl').setup({            -- indent-blankline
 })
 
 require('mini.icons').setup()
-require('mini.completion').setup()-- <c-n>/<c-p>, <CR>, <c-l>/<c-h>  FIXME shortcut to accept?
+require('mini.completion').setup()-- <c-n>/<c-p>, <CR>, <c-l>/<c-h>
 require('mini.snippets').setup()  -- TODO
 require('mini.diff').setup()
 require('mini.ai').setup()        -- around/inner text objects
@@ -117,7 +117,10 @@ require('nvim-treesitter').install({
   'ssh_config', 'tmux', 'toml', 'yaml', 'zsh'
 })
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'asm', 'bash', 'c', 'haskell', 'html', 'javascript', 'latex', 'markdown', 'python', 'rust', 'yaml', 'zsh' },
+  pattern = {
+    'asm', 'bash', 'c', 'haskell', 'html', 'javascript', 'latex', 'markdown',
+    'python', 'rust', 'yaml', 'zsh'
+  },
   callback = function()
     vim.treesitter.start()
 
