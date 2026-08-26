@@ -14,8 +14,9 @@ vim.keymap.set('n', 'zj', 'zcjzOzz', { desc = 'Close current fold when open. Alw
 vim.keymap.set('n', 'zk', 'zckzOzz', { desc = 'Close current fold when open. Always open previous fold.' })
 -- escape in insert mode leaves cursor in the same position
 vim.keymap.set('i', '<Esc>', '<Esc>`^', opts)
--- escape in normal mode turns off search highlight (TODO: find better alternative)
-vim.keymap.set('n', '<Esc>', '<Cmd>noh<CR>', opts) -- ESC disables highlight search
+-- escape in normal mode turns off search highlight (NOTE: now using builtin package)
+-- vim.keymap.set('n', '<Esc>', '<Cmd>noh<CR>', opts) -- ESC disables highlight search
+vim.keymap.set('n', '<Leader>u', '<Cmd>Undotree', { desc = 'Toggle undotree window' })
 -- cursor in insert mode
 vim.keymap.set('i', '<C-h>', '<Left>', opts)
 vim.keymap.set('i', '<C-j>', '<Down>', opts)
