@@ -1,7 +1,7 @@
 
-require('configs') -- ~/.config/nvim/lua/configs.lua
-require('keymaps') -- ~/.config/nvim/lua/keymaps.lua
-require('autocmd') -- ~/.config/nvim/lua/autocmd.lua
+require('configs') -- ~/.config/nvim-0.12/lua/configs.lua
+require('keymaps') -- ~/.config/nvim-0.12/lua/keymaps.lua
+require('autocmd') -- ~/.config/nvim-0.12/lua/autocmd.lua
 
 -- :Trim command to remove trailing whitespaces from the entire buffer
 vim.api.nvim_create_user_command('Trim', function()
@@ -16,6 +16,8 @@ vim.api.nvim_create_user_command('Update', function()
 end, {})
 
 -- Plugins {{{
+vim.cmd.packadd("nohlsearch") -- [builtin] calls nohlsearch after updatetime
+vim.cmd.packadd("nvim.undotree") -- [builtin] :Undotree
 vim.pack.add({
   'https://github.com/neovim/nvim-lspconfig',
   'https://github.com/nvim-mini/mini.nvim',
