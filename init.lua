@@ -116,7 +116,7 @@ require('nvim-treesitter').install({
   'asm', 'bash', 'bibtex', 'c', 'cpp', 'css', 'csv', 'haskell', 'html',
   'javascript', 'json', 'kitty', 'latex', 'lua', 'make', 'markdown',
   'markdown_inline', 'objdump', 'python', 'regex', 'rust', 'scheme',
-  'ssh_config', 'tmux', 'toml', 'yaml', 'zsh'
+  'ssh_config', 'toml', 'yaml', 'zsh'
 })
 vim.api.nvim_create_autocmd('FileType', {
   pattern = {
