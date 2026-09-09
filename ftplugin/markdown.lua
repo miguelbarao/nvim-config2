@@ -1,18 +1,16 @@
 vim.b.minisurround_config = {
   custom_surroundings = {
-    -- ![](link)
+    -- Markdown Links ![description](link)
     l = {
       output = { left = '![](', right = ')' },
     },
-    -- markdown code fence (code is indented)
-    -- FIXME: always indents content (treesitter?)
+    -- Markdown code fence. Asks for language.
+    -- NOTE: L-VISUAL indents contents, VISUAL doesn't
+    -- Use `vipv` instead of `vip` to prevent paragraph indentation.
     c = {
-      output = { left = '```', right = '```' },
-    },
-    C = {
       output = function()
         local lang = MiniSurround.user_input('Language')
-        return { left = '```' .. lang, right = '```' }
+        return { left = '```' .. lang .. '\n', right = '\n```' }
       end,
     }
   },
