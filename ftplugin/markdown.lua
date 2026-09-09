@@ -1,3 +1,7 @@
+vim.opt_local.wrap = true
+vim.opt_local.linebreak = true
+vim.opt_local.textwidth = 80
+
 vim.b.minisurround_config = {
   custom_surroundings = {
     -- Markdown Links ![description](link)
