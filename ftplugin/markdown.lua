@@ -9,12 +9,12 @@ vim.b.minisurround_config = {
       output = { left = '![](', right = ')' },
     },
     -- Markdown code fence. Asks for language.
-    -- NOTE: L-VISUAL indents contents, VISUAL doesn't
-    -- Use `vipv` instead of `vip` to prevent paragraph indentation.
+    -- NOTE: put the cursor in the empty line before the code block and
+    -- VISUAL select (not L-VISUAL) to the empty line after the block.
     c = {
       output = function()
         local lang = MiniSurround.user_input('Language')
-        return { left = '```' .. lang .. '\n', right = '\n```' }
+        return { left = "\n```" .. lang, right = "```\n" }
       end,
     }
   },
