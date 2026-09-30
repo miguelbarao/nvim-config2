@@ -29,8 +29,8 @@ vim.pack.add({
   'https://github.com/lukas-reineke/indent-blankline.nvim',
   { src = 'https://github.com/mrcjkb/haskell-tools.nvim', version = vim.version.range('^10') },
   'https://github.com/DetachHead/basedpyright.git',
-  'https://github.com/selimacerbas/live-server.nvim', -- markdown-preview dependency
-  'https://github.com/selimacerbas/markdown-preview.nvim',
+  -- 'https://github.com/selimacerbas/live-server.nvim', -- markdown-preview dependency
+  -- 'https://github.com/selimacerbas/markdown-preview.nvim',
   'https://github.com/lervag/vimtex',
 })
 -- :lua vim.pack.update() and then :write to confirm or :quit to cancel
@@ -40,9 +40,9 @@ vim.pack.add({
 -- Plugin settings {{{
 
 -- markdown-preview
-require('markdown_preview').setup({
-  default_theme = "light"
-})
+-- require('markdown_preview').setup({
+--   default_theme = "light"
+-- })
 
 -- indent-blankline
 local hooks=require('ibl.hooks')
