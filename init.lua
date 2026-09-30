@@ -27,7 +27,7 @@ vim.pack.add({
   'https://github.com/folke/flash.nvim',
   'https://github.com/folke/which-key.nvim',
   'https://github.com/lukas-reineke/indent-blankline.nvim',
-  { src = 'https://github.com/mrcjkb/haskell-tools.nvim', version = vim.version.range('^10') },
+  { src = 'https://github.com/mrcjkb/haskell-tools.nvim', version = vim.version.range('^11') },
   'https://github.com/DetachHead/basedpyright.git',
   -- 'https://github.com/selimacerbas/live-server.nvim', -- markdown-preview dependency
   -- 'https://github.com/selimacerbas/markdown-preview.nvim',
