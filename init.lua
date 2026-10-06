@@ -1,7 +1,6 @@
-
-require('configs') -- ~/.config/nvim-0.12/lua/configs.lua
-require('keymaps') -- ~/.config/nvim-0.12/lua/keymaps.lua
-require('autocmd') -- ~/.config/nvim-0.12/lua/autocmd.lua
+require('configs') -- ~/.config/nvim-config2/lua/configs.lua
+require('keymaps') -- ~/.config/nvim-config2/lua/keymaps.lua
+require('autocmd') -- ~/.config/nvim-config2/lua/autocmd.lua
 
 -- :Trim command to remove trailing whitespaces from the entire buffer
 vim.api.nvim_create_user_command('Trim', function()
@@ -28,10 +27,11 @@ vim.pack.add({
   'https://github.com/folke/flash.nvim',
   'https://github.com/folke/which-key.nvim',
   'https://github.com/lukas-reineke/indent-blankline.nvim',
-  { src = 'https://github.com/mrcjkb/haskell-tools.nvim', version = vim.version.range('^10') },
+  { src = 'https://github.com/mrcjkb/haskell-tools.nvim', version = vim.version.range('^11') },
   'https://github.com/DetachHead/basedpyright.git',
-  'https://github.com/selimacerbas/live-server.nvim', -- markdown-preview dependency
-  'https://github.com/selimacerbas/markdown-preview.nvim',
+  -- 'https://github.com/selimacerbas/live-server.nvim', -- markdown-preview dependency
+  -- 'https://github.com/selimacerbas/markdown-preview.nvim',
+  'https://github.com/lervag/vimtex',
 })
 -- :lua vim.pack.update() and then :write to confirm or :quit to cancel
 -- :lua vim.pack.del({ 'nvim-lspconfig', ... }) to uninstall packages
@@ -40,9 +40,9 @@ vim.pack.add({
 -- Plugin settings {{{
 
 -- markdown-preview
-require('markdown_preview').setup({
-  default_theme = "light"
-})
+-- require('markdown_preview').setup({
+--   default_theme = "light"
+-- })
 
 -- indent-blankline
 local hooks=require('ibl.hooks')
