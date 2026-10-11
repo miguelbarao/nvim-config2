@@ -29,8 +29,8 @@ vim.pack.add({
   'https://github.com/lukas-reineke/indent-blankline.nvim',
   { src = 'https://github.com/mrcjkb/haskell-tools.nvim', version = vim.version.range('^11') },
   'https://github.com/DetachHead/basedpyright.git',
-  -- 'https://github.com/selimacerbas/live-server.nvim', -- markdown-preview dependency
-  -- 'https://github.com/selimacerbas/markdown-preview.nvim',
+  'https://github.com/selimacerbas/kitehost.nvim', -- mdkite dependency
+  'https://github.com/selimacerbas/mdkite.nvim',
   'https://github.com/lervag/vimtex',
 })
 -- :lua vim.pack.update() and then :write to confirm or :quit to cancel
