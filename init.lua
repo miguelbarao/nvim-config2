@@ -40,9 +40,9 @@ vim.pack.add({
 -- Plugin settings {{{
 
 -- markdown-preview
--- require('markdown_preview').setup({
---   default_theme = "light"
--- })
+require('mdkite').setup({
+  default_theme = "light"
+})
 
 -- indent-blankline
 local hooks=require('ibl.hooks')
